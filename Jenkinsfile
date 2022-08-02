@@ -134,15 +134,9 @@ def scan_type
 			                           gcloud version
 
                                         gcloud auth activate-service-account --key-file="$CREDENTIAL"
-                                        
-                                        #gsutil mb -c regional -l us-central1 gs://$bname
-                                        #gsutil cp -r $WORKSPACE/report.html gs://$bname/xyz/
+
                                         gsutil cp -r $WORKSPACE/report.html gs://zapreport/$bname/
                                         
-                                        
-                                        
-                                        
-                   
                    
 			                           docker stop owasp
 			                           docker rm owasp
